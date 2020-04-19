@@ -32,9 +32,6 @@ mongoose.connect(process.env.DATABASEURL,
     useFindAndModify: false
 }).then(() => console.log('connected to DB')).catch((err) => console.log('ERROR: ', err.message))
 
-console.log('This is the mongo URL:     ', typeof(process.env.DATABASEURL));
-console.log(process.env.DATABASEURL);
-
 //seedDB();  //seed the database
 app.use(bodyParser.urlencoded({extended: true}));
 
